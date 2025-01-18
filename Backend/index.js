@@ -46,6 +46,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     user = user.filter((id) => id !== socket.id);
+    if(user.length==0) messages=[];
     io.emit("new-user", user);
   });
 
