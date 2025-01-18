@@ -58,8 +58,8 @@ io.on("connection", (socket) => {
 
 });
 
+const port=process.env.PORT || 8000
 
-
-httpServer.listen(8000,()=>{
+httpServer.listen(port,()=>{
     console.log('Connected.............')
 })
